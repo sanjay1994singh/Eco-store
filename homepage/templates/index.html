@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Responsive Store Template</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for the store template */
+        /* Add your own styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            color: #777777;
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .filter-form {
+            margin-bottom: 20px;
+        }
+
+        .filter-form select {
+            width: 200px;
+        }
+
+        .slider-container {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .slider-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slider-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .slider-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .slider-dot.active {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">My Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Main content of the store -->
+        <div class="container">
+            <h1>Welcome to our Store</h1>
+            <div class="filter-container">
+                <label for="filter">Filter:</label>
+                <select class="form-control" id="filter">
+                    <option value="all">All Products</option>
+                    <option value="featured">Featured Products</option>
+                    <option value="new">New Arrivals</option>
+                    <option value="sale">On Sale</option>
+                </select>
+            </div>
+            <!-- Main content Slider of the store -->
+            <div class="slider-container">
+                <div class="slider-content">
+                    <div class="slider-item">
+                        <img src="slider1.jpg" alt="Slider 1">
+                    </div>
+                    <div class="slider-item">
+                        <img src="slider2.jpg" alt="Slider 2">
+                    </div>
+                    <div class="slider-item">
+                        <img src="slider3.jpg" alt="Slider 3">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3" id="product-list">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more products here -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <img src="product1.jpg" class="card-img-top" alt="Product 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4">
+                        <img src="product2.jpg" class="card-img-top" alt="Product 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Product 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer section -->
+        <div class="container">
+            <hr>
+            <p>&copy; 2023 My Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Slider functionality
+        var sliderContent = document.querySelector(".slider-content");
+        var sliderItems = document.querySelectorAll(".slider-item");
+        var sliderDots = document.querySelectorAll(".slider-dot");
+
+        var currentIndex = 0;
+        var interval = setInterval(nextSlide, 5000);
+
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex >= sliderItems.length) {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }
+
+        function updateSlider() {
+            sliderContent.style.transform = `translateX(-${currentIndex * 100}%)`;
+            sliderDots.forEach(function (dot, index) {
+                if (index === currentIndex) {
+                    dot.classList.add("active");
+                } else {
+                    dot.classList.remove("active");
+                }
+            });
+        }
+
+        sliderDots.forEach(function (dot, index) {
+            dot.addEventListener("click", function () {
+                currentIndex = index;
+                updateSlider();
+            });
+        });
+
+        // Stop the slider on mouseover
+        sliderContent.addEventListener("mouseover", function () {
+            clearInterval(interval);
+        });
+
+        // Restart the slider on mouseout
+        sliderContent.addEventListener("mouseout", function () {
+            interval = setInterval(nextSlide, 5000);
+        });
+    </script>
+</body>
+
+</html>
